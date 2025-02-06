@@ -1,0 +1,16 @@
+<!DOCTYPE html> 
+<html lang="pt">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Importar Arquivo para Análise </title>
+    </head>
+    <body>
+      <h1>Upload / Import Arquivo!</h1> 
+      <p>Ger-UBS\home\templates\import_txt.html</p>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="arq_upload" /> 
+        <button type="submit">Upload</button>
+      </form>
+    </body>
+</html>

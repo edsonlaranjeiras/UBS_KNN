@@ -1,0 +1,58 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>IA Import.html</title>
+</head>
+<body>
+    </th><h1>&nbsp;Arquivo Importado!</h1>
+    <pre><h5>&nbsp; Este é o arquivo que foi importado</h5></pre>
+    <div class="container">
+        <div class="row" style="line-height: 1;">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+        <table class="table table-striped table-hover">
+        <th>Grupo</th>
+        <th>Idade</th>
+        <th>Sexo</th>
+        <th>Cancer</th>
+        <th>Diabetes</th>
+        <th>Hipertensao</th>
+        <th>Obesidade</th>
+        <th>Urgência</th>
+        <th>Diabetes</th>
+        <th>Hipertensao</th>
+        <th>Obesidade</th>
+        <th>Cancer</th>
+        <th>Diabetes</th>
+        <th>Hipertensao</th>
+        {% for regs in Pacientes %}
+            <tr>
+                <td>{{ regs.grupo }}</td>
+                <td>{{ regs.Idade}}</td>
+                <td>{{ regs.Sexo }}</td>
+                <td>{{ regs.Cond_Cancer }}</td>
+                <td>{{ regs.Cond_Diabetes }}</td>
+                <td>{{ regs.Cond_Hipertensao }}</td>
+                <td>{{ regs.Cond_Obesidade }}</td>
+                <td>{{ regs.Adm_Emergencia }}</td>
+                <td>{{ regs.Admin_Urgencia }}</td>
+                <td>{{ regs.Med_Ibuprofeno }}</td>
+                <td>...</td>
+                <td>{{ regs.Med_Lipitor }}</td>
+                <td>{{ regs.Med_Paracetamol }}</td>
+                <td>{{ regs.Med_Penicilina}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+        
+
