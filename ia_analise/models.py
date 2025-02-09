@@ -4,33 +4,81 @@ Criando um model no DB para receber os valores que serão
 importados na APP ia_analise
 '''
 from django.db import models
-class Pacientes(models.Model):
-    grupo = models.CharField(max_length=50, null=True, blank=True, verbose_name='Grupo')
-    Idade = models.FloatField(null=True, blank=True, verbose_name='Idade')
-    Sexo = models.FloatField(null=True, blank=True, verbose_name='Sexo')
-    Cond_Cancer = models.FloatField(null=True, blank=True, verbose_name='Cond_Cancer')
-    Cond_Diabetes = models.FloatField(null=True, blank=True, verbose_name='Cond_Diabetes')
-    Cond_Hipertensao = models.FloatField(null=True, blank=True, verbose_name='Cond_Hipertensao')
-    Cond_Obesidade = models.FloatField(null=True, blank=True, verbose_name='Cond_Obesidade')
-    Adm_Emergencia = models.FloatField(null=True, blank=True, verbose_name='Adm_Emergencia')
-    Adm_Urgencia = models.FloatField(null=True, blank=True, verbose_name='Adm_Urgencia')
-    Med_Ibuprofeno = models.FloatField(null=True, blank=True, verbose_name='Med_Ibuprofeno')
-    Med_Lipitor = models.FloatField(null=True, blank=True, verbose_name='Med_Lipitor')
-    Med_Paracetamol = models.FloatField(null=True, blank=True, verbose_name='Med_Paracetamol')
-    Med_Penicilina = models.FloatField(null=True, blank=True, verbose_name='Med_Penicilina')
-    Teste_Inconclusivo = models.FloatField(null=True, blank=True, verbose_name='Teste_Inconclusivo')
-    Teste_Normal = models.FloatField(null=True, blank=True, verbose_name='Teste_Normal')
-    Teste_Anormal = models.FloatField(null=True, blank=True, verbose_name='Teste_Anormal')
-    
-def __str__ (self):
-    return self.grupo 
+
+class DatasetCancerBucal(models.Model):
+    grupo = models.CharField(max_length=50, null=True,
+                             blank=True, verbose_name='Grupo')
+    tabagismo = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Tabagismo')
+    consumo_de_alcool = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Consumo de Álcool')
+    idade = models.FloatField(null=True, blank=True, verbose_name='Idade')
+    sexo = models.CharField(max_length=50, null=True,
+                            blank=True, verbose_name='Sexo')
+    infeccao_por_hpv = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Infecção por HPV')
+    exposicao_solar = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Exposição Solar')
+    dieta_inadequada = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Dieta Inadequada')
+    higiene_bucal_inadequada = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Higiene Bucal Inadequada')
+    uso_de_protese_inadequada = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Uso de Prótese Inadequada')
+    grau_de_risco = models.CharField(
+        max_length=50, null=True, blank=True, verbose_name='Grau de Risco')
+
+
+def __str__(self):
+    return self.grupo
+
 class Meta:
     ordering = ['grupo']
 
-from django.db import models
+
+class Pacientes(models.Model):
+    grupo = models.CharField(max_length=50, null=True,
+                             blank=True, verbose_name='Grupo')
+    Idade = models.FloatField(null=True, blank=True, verbose_name='Idade')
+    Sexo = models.FloatField(null=True, blank=True, verbose_name='Sexo')
+    Cond_Cancer = models.FloatField(
+        null=True, blank=True, verbose_name='Cond_Cancer')
+    Cond_Diabetes = models.FloatField(
+        null=True, blank=True, verbose_name='Cond_Diabetes')
+    Cond_Hipertensao = models.FloatField(
+        null=True, blank=True, verbose_name='Cond_Hipertensao')
+    Cond_Obesidade = models.FloatField(
+        null=True, blank=True, verbose_name='Cond_Obesidade')
+    Adm_Emergencia = models.FloatField(
+        null=True, blank=True, verbose_name='Adm_Emergencia')
+    Adm_Urgencia = models.FloatField(
+        null=True, blank=True, verbose_name='Adm_Urgencia')
+    Med_Ibuprofeno = models.FloatField(
+        null=True, blank=True, verbose_name='Med_Ibuprofeno')
+    Med_Lipitor = models.FloatField(
+        null=True, blank=True, verbose_name='Med_Lipitor')
+    Med_Paracetamol = models.FloatField(
+        null=True, blank=True, verbose_name='Med_Paracetamol')
+    Med_Penicilina = models.FloatField(
+        null=True, blank=True, verbose_name='Med_Penicilina')
+    Teste_Inconclusivo = models.FloatField(
+        null=True, blank=True, verbose_name='Teste_Inconclusivo')
+    Teste_Normal = models.FloatField(
+        null=True, blank=True, verbose_name='Teste_Normal')
+    Teste_Anormal = models.FloatField(
+        null=True, blank=True, verbose_name='Teste_Anormal')
+
+
+def __str__(self):
+    return self.grupo
+
+class Meta:
+    ordering = ['grupo']
+
+
 class Dados(models.Model):
     grupo = models.CharField(max_length=50, null=True, blank=True,
-    verbose_name='Grupo')
+                             verbose_name='Grupo')
     mdw = models.FloatField(null=True, blank=True, verbose_name='mdw')
     latw = models.FloatField(null=True, blank=True, verbose_name='latw')
     tmcw = models.FloatField(null=True, blank=True, verbose_name='tmcw')
@@ -63,8 +111,11 @@ class Dados(models.Model):
     mcb = models.FloatField(null=True, blank=True, verbose_name='mcb')
     psdsb = models.FloatField(null=True, blank=True, verbose_name='psdsb')
     s6b = models.FloatField(null=True, blank=True, verbose_name='s6b')
-    
-def __str__ (self):
-    return self.grupo 
+
+
+def __str__(self):
+    return self.grupo
+
+
 class Meta:
     ordering = ['grupo']
