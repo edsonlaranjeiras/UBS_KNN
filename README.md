@@ -1,7 +1,7 @@
 # Sistema Gerenciador de UBS
 
 ## Descrição do Projeto
-Este projeto foi desenvolvido como parte da disciplina **Framework** da pós-graduação em **Sistemas e Agentes Inteligentes**. A aplicação web foi construída utilizando o **Django Framework** e tem como objetivo acessar dados de um banco de dados, realizar o treinamento de um modelo de machine learning KNN (K-nearest neighbors) e fornecer ferramentas para avaliar seu desempenho.
+Este projeto foi desenvolvido como parte da disciplina **Framework** da pós-graduação em **Sistemas e Agentes Inteligentes da UFG**. A aplicação web foi construída utilizando o **Django Framework** e tem como objetivo acessar dados de um banco de dados, realizar o treinamento de um modelo de machine learning KNN (K-nearest neighbors) e fornecer ferramentas para avaliar seu desempenho.
 
 ## Alunos:
   - Samantha Adiely Alecrim
