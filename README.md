@@ -13,7 +13,7 @@ Este projeto foi desenvolvido como parte da disciplina **Framework** da pós-gra
 - **Treinamento de Modelo**: Implementação de um modelo de machine learning (KNN) treinado com os dados importados.
 - **Métricas de Avaliação**:
   - Curva ROC
-  - Reca
+  - Precisão e Recall
   - Matriz de Confusão
 
 ## Tecnologias Utilizadas
