@@ -29,17 +29,17 @@ def ia_import_save(request):
                 row2 = row.replace(',', '.')
                 row3 = row2.split(';')
                 Pacientes.objects.create(
-                                grupo = row3[0], Idade = float (row3 [1]), Sexo = float(row3[2]), 
+                                grupo = row3[0], Idade = float(row3[1]), Sexo = float(row3[2]), 
                                 Cond_Cancer = float(row3[3]), Cond_Diabetes = float(row3[4]), 
                                 Cond_Hipertensao = float(row3[5]), Cond_Obesidade = float(row3[6]),
                                 Adm_Emergencia = float(row3[7]), Adm_Urgencia = float(row3[8]), 
                                 Med_Ibuprofeno = float(row3[9]), Med_Lipitor = float(row3[10]), 
-                                Med_Paracetamol = float (row3[11]), Med_Penicilina = float(row3[12]), 
+                                Med_Paracetamol = float(row3[11]), Med_Penicilina = float(row3[12]), 
                                 Teste_Inconclusivo = float(row3[13]), Teste_Normal = float(row3[14]), 
-                                Teste_Anormal = float (row3[15]))
+                                Teste_Anormal = float(row3[15]))
             i = i + 1
         file2.close()
-        os.remove(file_url.replace("/", ""))
+        #os.remove(file_url.replace("/", ""))
     from django.shortcuts import redirect
     return redirect('ia_import_list') 
     
