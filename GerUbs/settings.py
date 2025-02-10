@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'ia_analise',
     'bootstrap5',
     'django_tables2',
-    
-    #'pessoas',
 ]
 
 MIDDLEWARE = [

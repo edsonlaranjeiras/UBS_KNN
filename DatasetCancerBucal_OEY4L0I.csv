@@ -1,4 +1,4 @@
-grupo;idade;sexo;tabagismo;consumo_alcool;infeccao_hpv;exposicao_solar;dieta_inadequada;higiene_bucal_inadequada;uso_protese_inadequada;grau_risco
+grupo;idade;sexo;tabagismo;consumo_de_alcool;infeccao_hpv;exposicao_solar;dieta_inadequada;higiene_bucal_inadequada;uso_protese_inadequada;grau_risco
 Controle;0.0677966101694916;0.0;0.0;0.0;0.0;0.0;0.0;0.0;1.0;2
 Controle;0.898305084745763;1.0;1.0;1.0;0.0;1.0;0.0;0.0;1.0;5
 Controle;0.779661016949152;0.0;0.0;1.0;0.0;1.0;0.0;1.0;0.0;4

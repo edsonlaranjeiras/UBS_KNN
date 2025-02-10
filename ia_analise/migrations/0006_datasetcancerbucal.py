@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('grupo', models.CharField(blank=True, max_length=50, null=True, verbose_name='Grupo')),
                 ('tabagismo', models.CharField(blank=True, max_length=50, null=True, verbose_name='Tabagismo')),
-                ('consumo_de_alcool', models.CharField(blank=True, max_length=50, null=True, verbose_name='Consumo de Álcool')),
+                ('consumo_alcool', models.CharField(blank=True, max_length=50, null=True, verbose_name='Consumo de Álcool')),
                 ('idade', models.FloatField(blank=True, null=True, verbose_name='Idade')),
                 ('sexo', models.CharField(blank=True, max_length=50, null=True, verbose_name='Sexo')),
                 ('infeccao_por_hpv', models.CharField(blank=True, max_length=50, null=True, verbose_name='Infecção por HPV')),
@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('dieta_inadequada', models.CharField(blank=True, max_length=50, null=True, verbose_name='Dieta Inadequada')),
                 ('higiene_bucal_inadequada', models.CharField(blank=True, max_length=50, null=True, verbose_name='Higiene Bucal Inadequada')),
                 ('uso_de_protese_inadequada', models.CharField(blank=True, max_length=50, null=True, verbose_name='Uso de Prótese Inadequada')),
-                ('grau_de_risco', models.CharField(blank=True, max_length=50, null=True, verbose_name='Grau de Risco')),
+                ('grau_risco', models.CharField(blank=True, max_length=50, null=True, verbose_name='Grau de Risco')),
             ],
         ),
     ]
