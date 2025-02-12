@@ -1,34 +1,65 @@
 {% load static %}
-{% load bootstrap5 %}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-{% bootstrap_messages %}
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <title>Página de Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ger-Ubs - Página de Gerência </title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+
+    <!-- Inclusão do Bootstrap via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <center>
-        <br><br><br><br>
-        <img src="{% static 'dados_pacientes.png' %}" class="img-fluid" alt="Teste" width="10%">
-        <br><br>
-    </center>
-        <form method="POST" action="{% url 'index_alias' %}">
-        {% csrf_token %}
-            <center>
-            <p style="width:300px;">Bem Vindo a Página de Login</p>
-            <div style="border-style: ridge; border-radius: 10px; width: 300px;">
-                <br>
-                <p><input type="text" name="username" class="border-top-0" placeholder="User Name" style="width:250px;">
-                </p>
-                <p></p><input type="password" name="password" class="border-top-0" placeholder="Password"
-                style="width:250px;">
-                </p>
-                <p></p><input type="submit" value="Fazer Login" class="btn btn-info"></p>
+    
+    <div class="container">
+        &emsp; <a href="/home">Início</a> &emsp; <a href="/login_usr">Login</a>
+        <header class="text-center mt-5">
+            <h1>GERÊNCIA DA UNIDADE</h1>
+            <p class="lead">Esta seção mostra  dados e informações gerenciais</p>
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="image-container">
+                            <img src="{% static 'dados_pacientes.png' %}" alt="Representação do Sistema Gerenciador de UBS">
+                        </div>
+                
+                        <div class="card-body">
+                            <h5 class="card-title">Lista de Paciente</h5>
+                            <p class="card-text">Espaço de destinado a gerência dos pacientes.</p>
+                            <a href="/pacientes" class="btn btn-primary">Pacientes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem">
+                        <div class="card-body">
+                            <h5 class="card-title">Card 2</h5>
+                            <p class="card-text">Outro exemplo de card com o Bootstrap.</p>
+                            <a href="#" class="btn btn-primary">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem">
+                        <div class="card-body">
+                            <h5 class="card-title">Card 3</h5>
+                            <p class="card-text">Mais um card usando o framework Bootstrap.</p>
+                            <a href="#" class="btn btn-primary">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            </center>
-        </form>
+        </main>
+    </div>
+
+    <!-- Inclusão do Bootstrap JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
-<br><br>
 </html>

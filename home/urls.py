@@ -4,8 +4,11 @@ from django.urls import path
 from . import views
  
 urlpatterns = [
-    path('', views.index, name='index_alias'),
-    path('gerencia', views.gerencia, name='gerencia'),  
+    path('', views.index, name='index'),
+    path('home', views.index, name='index'), 
+    
+    path('login_usr', views.login_usr, name='login_usr_alias'),
+  
     path('avisos', views.ver_avisos, name='ver_avisos'),
     path('pacientes', views.pacientes, name='pacientes'),
     path("pessoa_create/", views.pessoa_create.as_view(), name='pessoa_create_alias'),
@@ -20,5 +23,3 @@ urlpatterns = [
     #path('importar', views.importar, name='importar_alias'),
     path('import_txt', views.import_txt, name='import_txt_alias'),
 ]
-
-

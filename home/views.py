@@ -5,8 +5,9 @@ from django.views.generic import ListView
 #from .models import pessoa
 #def index(request):
 #return render(request, 'index.html')
+
 from django.contrib.auth import authenticate, login, logout
-def index(request):
+def login(request):
     usuario = request.POST.get('username')
     senha = request.POST.get('password')
     user = authenticate(username=usuario, password=senha)
@@ -37,8 +38,11 @@ class pessoa_menu(SingleTableView):
     table_pagination = {"per_page": 10}
     template_name = 'home/pessoa_menu.html'    
        
-def gerencia(request):
-    return render(request, 'gerencia.html')
+def index(request):
+    return render(request, 'index.html')
+
+def login_usr(request):
+    return render(request,'login_usr.html')
 
 def ver_avisos(request):
     return render(request, 'ver_avisos.html')

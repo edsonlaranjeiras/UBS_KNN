@@ -1,1 +1,1 @@
-Este é um experimento trabalho da Disciplina de Framework
+Este é um experimento da Disciplina de Framework
