@@ -1,39 +1,11 @@
-from django .shortcuts import render
 
-from django .http import HttpResponse
-    
-from django.contrib.auth import authenticate, login
+from django.views.generic import ListView
+from django.shortcuts import render
 
-def login_usr(request):
-    usuario = request.POST.get('username')
-    senha = request.POST.get('password')
-    user = authenticate(username=usuario, password=senha)
-    if (user is not None):
-        login(request, user)
-        request.session['username'] = usuario
-        request.session['password'] = senha
-        request.session['usernamefull'] = user.get_full_name()
-        print(request.session['username'])
-        print(request.session['password'])
-        print(request.session['usernamefull'])
-        from django.shortcuts import redirect
-        return redirect('menu_analitico')
-    else:
-        data ={}
-        if (usuario):
-           data['msg'] = "Usuário autenticado com sucesso!" + usuario
-        return render(request, 'login_usr.html')
+# Define a função index
 
-# Define a função login do usuário
-
-#def login_usr(request):
-   #return render(request, 'login_usr.html')
-
-# Define a função do Menu_analitico
-
-def menu_analitico(request):
-    return render(request, 'menu_analitico.html')
-
+def index(request):
+    return render(request, 'index.html')
 
 # FUNÇÃO PARA IMPORTAR OS ARQUIVOS DE DATASET
 def ia_import(request):

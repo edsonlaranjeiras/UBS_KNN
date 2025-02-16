@@ -2,12 +2,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import ListView
-from .models import pessoa
+#from .models import pessoa
 #def index(request):
 #return render(request, 'index.html')
-'''
+
 from django.contrib.auth import authenticate, login, logout
-def index(request):
+def login(request):
     usuario = request.POST.get('username')
     senha = request.POST.get('password')
     user = authenticate(username=usuario, password=senha)
@@ -27,7 +27,7 @@ def index(request):
            data['msg'] = "Usuário autenticado com sucesso!" + usuario
         return render(request, 'index.html', data)
    
-'''   
+    
 from django_tables2 import SingleTableView
 class pessoa_menu(SingleTableView):
     from .models import pessoa
